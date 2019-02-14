@@ -1,3 +1,26 @@
+'''
+from math import exp, pi, erf, sqrt
+
+mean, dev = map(float,input().split())
+#lim = float(input())
+#low,hi = map(int,input().split())
+
+def Normal_DistributionI(mu, sigma):
+    def gauss_cdf(x):
+        nonlocal mu, sigma
+        arg = (x-mu)/(sigma*sqrt(2))
+        return (erf(arg) + 1) / 2
+    return gauss_cdf
+
+#gauss_cdf = Normal_DistributionI(mean, dev)
+#ans1 = gauss_cdf(hi)
+#ans2 = gauss_cdf(hi)-gauss_cdf(low)
+
+print("%.2f" %ans1)
+print("%.2f" %ans2)
+print("%.2f" %ans3)
+'''
+
 from math import sqrt,erf
 
 def Normal_DistributionII(arg, mu, sigma):
